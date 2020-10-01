@@ -1,0 +1,56 @@
+{%extends 'base.html'%}
+
+{%block content%}
+
+<div class="jumbotron text-dark">
+    <h1 class="display-4">Hero-Battle <i class="fab fa-python"></i></h1>
+    <a class="btn btn-outline-dark btn-lg btn-block" href="{% url 'battle' %}" role="button">-Try Again-</a>
+<br>
+
+<!-- Display Hero 1 -->
+
+<div class="card d-inline-block align-top border-10" style="width: 18rem;">
+    <img src="{{apihero.url}}" class="card-img-top" alt="...">
+    <div class="card-img-overlay">
+        <h1 class="card-title bg-{{color}} text-white text-center">{{text}}</h1>
+        </div>
+    <div class="card-body bg-dark">
+        <h2 class="card-text bg-dark text-white text-center">{{name}}</h2>
+        <hr style="width: 100%; color: white; height: 1px; background-color:white;" />
+        <h4 class="card-text bg-dark text-white text-center">Power: {{power}}</h4>
+        <h4 class="card-text bg-dark text-white text-center">Combat: {{combat}}</h4>
+        <h4 class="card-text bg-dark text-white text-center">Intelligence: {{intelligence}}</h4>
+        <h4 class="card-text bg-dark text-white text-center">Strength: {{strength}}</h4>
+        <h4 class="card-text bg-dark text-white text-center">Speed: {{speed}}</h4>
+        <h4 class="card-text bg-dark text-white text-center">Durability: {{durability}}</h4>
+        <hr style="width: 100%; color: white; height: 1px; background-color:white;" />
+        <h4 class="card-text bg-dark text-white text-center">Total: {{total1}}</h4>
+    </div>
+</div>
+
+<div class="d-inline-block align-top text-center mt-5"style="width: 100px;">
+    <h1>  VS </h1>
+</div>
+
+<!-- Display Hero 2 -->
+
+<div class="card d-inline-block align-top" style="width: 18rem;">
+    <img src="{{apihero2.url}}" class="card-img-top" alt="...">
+    <div class="card-img-overlay">
+    <h1 class="card-title bg-{{color2}} text-white text-center">{{text2}}</h1>
+    </div>
+    <div class="card-body bg-dark">
+        <h2 class="card-text bg-dark text-white text-center">{{name2}}</h2>
+        <hr style="width: 100%; color: white; height: 1px; background-color:white;" />
+        <h4 class="card-text bg-dark text-white text-center">Power:{{power2}}</h3>
+        <h4 class="card-text bg-dark text-white text-center">Combat: {{combat2}}</h4>
+        <h4 class="card-text bg-dark text-white text-center">Intelligence: {{intelligence2}}</h4>
+        <h4 class="card-text bg-dark text-white text-center">Strength: {{strength2}}</h4>
+        <h4 class="card-text bg-dark text-white text-center">Speed: {{speed2}}</h4>
+        <h4 class="card-text bg-dark text-white text-center">Durability: {{durability2}}</h4>
+        <hr style="width: 100%; color: white; height: 1px; background-color:white;" />
+        <h4 class="card-text bg-dark text-white text-center">Total: {{total2}}</h4>
+    </div>
+</div>
+
+{%endblock%}
